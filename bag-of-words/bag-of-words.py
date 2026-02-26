@@ -9,8 +9,8 @@ def bag_of_words_vector(tokens, vocab):
     for word in tokens:
         mp[word] = mp.get(word, 0) + 1
     res = np.zeros(len(vocab), dtype = int)
-    for i, word in enumerate(vocab):
-        if word in mp:
-            res[i] = mp[word]
+    for a in range(len(vocab)):
+        if vocab[a] in mp:
+            res[a] = mp[vocab[a]]
     return res
     pass
